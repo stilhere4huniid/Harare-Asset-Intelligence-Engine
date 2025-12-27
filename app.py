@@ -10,7 +10,6 @@ from datetime import datetime
 st.set_page_config(page_title="Harare Asset Engine", layout="wide", page_icon="🇿🇼")
 
 # --- 1. DATA LOADING (MUST BE FIRST) ---
-# We load data immediately so it's available for the Reset Logic
 if 'data_loaded' not in st.session_state:
     st.session_state['data_loaded'] = False
 
@@ -24,9 +23,7 @@ if not st.session_state['data_loaded']:
         st.stop()
 
 # --- 2. RESET LOGIC (CALLBACK) ---
-# This runs BEFORE the page reloads, fixing the "Tab Jump" glitch
 def reset_callback():
-    # 1. Reset Terrace Widgets
     if 'terrace_df' in st.session_state:
         all_assets = list(st.session_state['terrace_df']['Asset_Name'].unique())
         st.session_state['widget_t_assets'] = all_assets
@@ -34,23 +31,72 @@ def reset_callback():
     
     st.session_state['widget_t_expiry'] = (0, 60)
     st.session_state['t_expiry'] = (0, 60)
-    
     st.session_state['widget_t_risk'] = False
     st.session_state['t_risk'] = False
     
-    # 2. Reset WestProp Widgets
     st.session_state['widget_w_sim'] = False
     st.session_state['w_sim'] = False
-    
     st.session_state['widget_w_budget'] = 0
     st.session_state['w_budget'] = 0
-    
-    # 3. CRITICAL: Do NOT touch 'app_mode'. This keeps you on the current tab.
 
 # --- 3. HELPER FUNCTIONS ---
 def update_state(key, widget_key):
     st.session_state[key] = st.session_state[widget_key]
 
+# --- 4. RECOMMENDATION ENGINE (THE NEW BRAIN) ---
+def get_recommendations(mode, df, metrics):
+    recs = []
+    
+    if mode == "Terrace Africa":
+        # Extract numerical values safely
+        risk_count = metrics['High Risk Tenants']
+        rev_risk_str = str(metrics['Revenue at Risk']).replace('$','').replace(',','')
+        rev_risk = float(rev_risk_str) if rev_risk_str else 0
+        
+        # 1. Revenue Risk Logic
+        if rev_risk > 150000:
+            recs.append("CRITICAL: Revenue exposure exceeds $150k. Immediate legal demand letters recommended for top 5 debtors.")
+        elif rev_risk > 50000:
+            recs.append("Moderate Revenue Risk. Initiate payment plan negotiations with 'Late Pay' tenants.")
+            
+        # 2. Tenant Volume Logic
+        if risk_count > 25:
+            recs.append("Portfolio Health Alert: High volume of at-risk tenants. Review property management collection procedures.")
+            
+        # 3. Root Cause Logic
+        if not df.empty and 'Late_Payments_Last_12M' in df.columns:
+            late_payers = len(df[df['Late_Payments_Last_12M'] > 0])
+            if late_payers > (len(df) * 0.6):
+                recs.append("Dominant Issue: Cash Flow. Tenants are struggling to pay. Review rental levels vs. market turnover.")
+            else:
+                recs.append("Dominant Issue: Footfall. Tenants are suffering from low traffic. Marketing activations required.")
+
+    else: # WestProp
+        # Extract numerical values
+        occ_str = str(metrics['Committed Occupancy']).replace('%','')
+        committed_occ = float(occ_str) if occ_str else 0
+        sim_active = metrics.get('Simulation Active', 'No') == 'Yes'
+        
+        # 1. Occupancy Logic
+        if committed_occ < 30:
+            recs.append("Early Stage Risk: Occupancy below 30%. Prioritize Anchor Tenant incentives to unlock line shop interest.")
+        elif committed_occ < 60:
+            recs.append("Growth Phase: accelerate broker incentives to cross the 60% threshold for bank funding.")
+        else:
+            recs.append("Stabilization: Strong pre-let status. Focus on 'Tenant Mix' curation and premium rental rates.")
+            
+        # 2. Simulation Logic
+        if sim_active:
+            recs.append("SCENARIO: This simulation confirms project viability. Use this report for Bank Funding applications.")
+        else:
+            recs.append("Pipeline Opportunity: Significant GLA in 'Negotiating' phase. Launch closing campaign to convert pipeline.")
+
+    if not recs:
+        recs.append("Operations appear stable based on current filters. Continue routine monitoring.")
+        
+    return recs
+
+# --- PDF ENGINE ---
 class PDF(FPDF):
     def header(self):
         self.set_font('Arial', 'B', 12)
@@ -82,9 +128,9 @@ def generate_report(df, mode, metrics):
     pdf.cell(200, 10, txt=title, ln=True, align='L')
     pdf.set_font("Arial", size=10)
     pdf.cell(200, 10, txt=f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}", ln=True, align='L')
-    pdf.ln(10)
+    pdf.ln(5)
     
-    # Metrics
+    # Metrics Section
     pdf.set_font("Arial", 'B', 14)
     pdf.cell(200, 10, txt="Key Performance Indicators", ln=True, align='L')
     pdf.set_font("Arial", size=11)
@@ -92,7 +138,21 @@ def generate_report(df, mode, metrics):
     for key, value in metrics.items():
         clean_value = str(value).encode('latin-1', 'replace').decode('latin-1')
         pdf.cell(200, 8, txt=f"{key}: {clean_value}", ln=True)
-    pdf.ln(10)
+    pdf.ln(5)
+
+    # --- NEW: STRATEGIC RECOMMENDATIONS SECTION ---
+    pdf.set_font("Arial", 'B', 14)
+    pdf.set_text_color(0, 50, 100) # Dark Blue for Professional Look
+    pdf.cell(200, 10, txt="Strategic Recommendations / Executive Note", ln=True, align='L')
+    pdf.set_font("Arial", 'I', 11) # Italic for advice
+    pdf.set_text_color(0, 0, 0) # Back to Black
+    
+    recs = get_recommendations(mode, df, metrics)
+    for rec in recs:
+        # Clean text for PDF compatibility
+        clean_rec = rec.encode('latin-1', 'replace').decode('latin-1')
+        pdf.multi_cell(0, 8, txt=f"- {clean_rec}")
+    pdf.ln(5)
     
     # Table Logic
     def draw_header(mode_type, is_risk):
@@ -162,14 +222,12 @@ def generate_report(df, mode, metrics):
 
     return pdf.output(dest='S').encode('latin-1')
 
-# --- 4. SIDEBAR CONFIG ---
+# --- 5. SIDEBAR CONFIG ---
 st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Zimbabwe.svg", width=50)
 st.sidebar.title("Asset Intelligence")
 
-# RESET BUTTON (With Callback - The Fix)
 st.sidebar.button("🔄 Reset Dashboard", on_click=reset_callback)
 
-# MODE SELECTOR
 mode = st.sidebar.radio(
     "Select Portfolio Mode:", 
     ["Terrace Africa (Operational)", "WestProp (Development)"],
@@ -179,19 +237,17 @@ mode = st.sidebar.radio(
 st.sidebar.markdown("---")
 st.sidebar.header("🎛️ Control Panel")
 
-# --- 5. MAIN APPLICATION LOGIC ---
+# --- 6. MAIN APPLICATION LOGIC ---
 
 if mode == "Terrace Africa (Operational)":
     df = st.session_state['terrace_df']
     available_assets = df['Asset_Name'].unique()
     
-    # Initialize defaults if they don't exist yet
     if 't_assets' not in st.session_state:
         st.session_state['t_assets'] = list(available_assets)
         st.session_state['t_expiry'] = (0, 60)
         st.session_state['t_risk'] = False
 
-    # Terrace Widgets
     selected_assets = st.sidebar.multiselect(
         "Filter by Asset:", 
         options=available_assets, 
@@ -217,7 +273,6 @@ if mode == "Terrace Africa (Operational)":
         on_change=update_state, args=('t_risk', 'widget_t_risk')
     )
 
-    # Filter Data
     filtered_df = df[df['Asset_Name'].isin(selected_assets)]
     filtered_df = filtered_df[
         (filtered_df['Lease_Expiry_Months'] >= expiry_range[0]) & 
@@ -226,13 +281,11 @@ if mode == "Terrace Africa (Operational)":
     if show_risk_only:
         filtered_df = filtered_df[filtered_df['Risk_Flag'] == True]
 
-    # Metrics
     total_gla = filtered_df['GLA_Occupied'].sum()
     monthly_rev = (filtered_df['GLA_Occupied'] * filtered_df['Rent_per_Sqm']).sum()
     risk_subset = filtered_df[filtered_df['Risk_Flag'] == True]
     rev_at_risk = (risk_subset['GLA_Occupied'] * risk_subset['Rent_per_Sqm']).sum()
 
-    # Reporting Button
     st.sidebar.markdown("---")
     st.sidebar.header("📄 Reporting")
     report_metrics = {
@@ -252,7 +305,6 @@ if mode == "Terrace Africa (Operational)":
             mime="application/pdf"
         )
 
-    # Visuals
     st.title("🇿🇼 Terrace Africa: Revenue Protection")
     st.markdown(f"**View:** {', '.join(selected_assets) if selected_assets else 'No Assets Selected'}")
     
@@ -267,10 +319,8 @@ if mode == "Terrace Africa (Operational)":
         
         st.divider()
 
-        # --- NEW FEATURE: TENANT MIX ANALYSIS ---
         st.subheader("📊 Portfolio Composition (Tenant Mix)")
         
-        # 1. Helper function to categorize tenants
         def categorize_tenant(name):
             name = name.lower()
             if any(x in name for x in ['pizza', 'chicken', 'creamy', 'nush', 'smokehouse', 'spur', 'rocomamas', 'ocean', 'mugg', 'kfc']):
@@ -280,15 +330,13 @@ if mode == "Terrace Africa (Operational)":
             elif any(x in name for x in ['pharmacy', 'clicks', 'sorbet', 'bank', 'solution']):
                 return 'Services / Health'
             elif 'line shop' in name:
-                return 'Specialty Retail' # Assuming line shops are general retail
+                return 'Specialty Retail' 
             else:
                 return 'Other Retail'
 
-        # 2. Apply category
         viz_df = filtered_df.copy()
         viz_df['Category'] = viz_df['Tenant_Name'].apply(categorize_tenant)
         
-        # 3. Create Sunburst Chart
         c1, c2 = st.columns([1, 2])
         
         with c1:
@@ -326,14 +374,12 @@ if mode == "Terrace Africa (Operational)":
             st.dataframe(filtered_df[['Asset_Name', 'Tenant_Name', 'GLA_Occupied', 'Lease_Expiry_Months', 'Risk_Flag']].sort_values('Lease_Expiry_Months'), use_container_width=True)
 
 else:
-    # --- WESTPROP MODE ---
     df = st.session_state['westprop_df']
     
     if 'w_sim' not in st.session_state:
         st.session_state['w_sim'] = False
         st.session_state['w_budget'] = 0
 
-    # WestProp Widgets
     st.sidebar.subheader("🚀 Simulation Tools")
     
     simulate_success = st.sidebar.checkbox(
@@ -352,7 +398,6 @@ else:
         on_change=update_state, args=('w_budget', 'widget_w_budget')
     )
 
-    # Filter Logic
     filtered_df = df[df['Fit_Out_Budget_USD'] >= min_budget]
     
     if simulate_success:
@@ -360,14 +405,12 @@ else:
         filtered_df.loc[filtered_df['Pre_Let_Status'] == 'Negotiating', 'Pre_Let_Status'] = 'Committed (Simulated)'
         st.success("🔮 Simulation Active: Projecting 100% conversion of pipeline deals.")
 
-    # Metrics
     total_gla = 90000
     committed_mask = filtered_df['Pre_Let_Status'].str.contains('Committed')
     committed_gla = filtered_df[committed_mask]['GLA_Occupied'].sum()
     occupied_gla = filtered_df['GLA_Occupied'].sum()
     vacant_gla = total_gla - occupied_gla
 
-    # Reporting Button
     st.sidebar.markdown("---")
     st.sidebar.header("📄 Reporting")
     report_metrics = {
@@ -386,7 +429,6 @@ else:
             mime="application/pdf"
         )
 
-    # Visuals
     st.title("🏗️ Mall of Zimbabwe: Feasibility Engine")
     c1, c2, c3 = st.columns(3)
     c1.metric("Master Plan GLA", "90,000 m²")
