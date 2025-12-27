@@ -63,6 +63,7 @@ This tool serves two distinct profiles:
 
 ---
 
+```text
 Harare-Asset-Intelligence-Engine/
 │
 ├── assets/                     # Folder for all your screenshots
@@ -87,7 +88,7 @@ Harare-Asset-Intelligence-Engine/
 ├── METHODOLOGY.md              # The Math & Logic
 ├── DOCUMENTATION.md            # User Manual
 └── LICENSE                     # MIT License
-
+```
 ---
 
 ## 💻 Installation & Usage
@@ -130,4 +131,10 @@ I am not affiliated with **WestProp Holdings** or **Terrace Africa**. All financ
 * 🐙 **GitHub:** [stilhere4huniid](https://github.com/stilhere4huniid)
 
 ---
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
 *MIT License © 2025 Adonis Chiruka*
