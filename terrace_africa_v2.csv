@@ -1,0 +1,156 @@
+Tenant_ID,Portfolio,Asset_Name,Tenant_Name,GLA_Occupied,Rent_per_Sqm,Lease_Expiry_Months,Late_Payments_Last_12M,Footfall_Trend,Risk_Flag
+TA-7718,Terrace Africa,Village Walk Borrowdale,Pick n Pay (Anchor),2500,21.498237134627715,36,1,Stable,False
+TA-5256,Terrace Africa,Village Walk Borrowdale,Woolworths,1200,19.803175047108112,43,0,Stable,False
+TA-2381,Terrace Africa,Village Walk Borrowdale,Mugg & Bean,251,34.1041057041915,22,0,Stable,False
+TA-5753,Terrace Africa,Village Walk Borrowdale,Ocean Basket,350,26.722366555453746,17,0,Declining,True
+TA-3428,Terrace Africa,Village Walk Borrowdale,Sorbet,173,34.365408121488564,48,3,Stable,True
+TA-9607,Terrace Africa,Village Walk Borrowdale,Solution Centre,142,35.39307377515921,15,0,Stable,False
+TA-2335,Terrace Africa,Village Walk Borrowdale,Cafe Nush,245,27.544134782722782,58,1,Stable,False
+TA-6528,Terrace Africa,Village Walk Borrowdale,Line Shop 179,95,38.03915169265467,28,1,Declining,True
+TA-9418,Terrace Africa,Village Walk Borrowdale,Line Shop 673,59,47.93160227807377,33,0,Declining,True
+TA-1790,Terrace Africa,Village Walk Borrowdale,Line Shop 960,136,35.028071481458504,25,1,Stable,False
+TA-1110,Terrace Africa,Village Walk Borrowdale,Line Shop 164,141,30.828211000244345,31,1,Declining,True
+TA-5801,Terrace Africa,Village Walk Borrowdale,Line Shop 155,127,43.397954308143305,31,0,Declining,True
+TA-4772,Terrace Africa,Village Walk Borrowdale,Line Shop 455,78,45.17720642409568,22,0,Stable,False
+TA-8181,Terrace Africa,Village Walk Borrowdale,Line Shop 700,53,43.38463604738617,12,0,Stable,False
+TA-1040,Terrace Africa,Village Walk Borrowdale,Line Shop 687,129,40.730840393469975,17,0,Stable,False
+TA-7825,Terrace Africa,Village Walk Borrowdale,Line Shop 501,121,36.75510960000209,12,0,Stable,False
+TA-3293,Terrace Africa,Village Walk Borrowdale,Line Shop 785,74,41.22335285387551,33,1,Stable,False
+TA-1612,Terrace Africa,Village Walk Borrowdale,Line Shop 874,89,42.19396851579188,30,0,Stable,False
+TA-3756,Terrace Africa,Village Walk Borrowdale,Line Shop 753,122,47.17490374656347,28,1,Stable,False
+TA-3756,Terrace Africa,Village Walk Borrowdale,Line Shop 720,111,32.82270757072881,15,0,Stable,False
+TA-8850,Terrace Africa,Village Walk Borrowdale,Line Shop 621,105,33.81221508753013,26,0,Declining,True
+TA-5501,Terrace Africa,Village Walk Borrowdale,Line Shop 735,111,42.034732098847414,33,0,Declining,True
+TA-1920,Terrace Africa,Village Walk Borrowdale,Line Shop 236,143,40.91666673730446,8,0,Declining,True
+TA-3329,Terrace Africa,Village Walk Borrowdale,Line Shop 316,128,31.249480819397682,32,0,Stable,False
+TA-9366,Terrace Africa,Village Walk Borrowdale,Line Shop 915,93,41.6096163539209,15,2,Stable,True
+TA-8588,Terrace Africa,Village Walk Borrowdale,Line Shop 190,136,31.238505378998653,22,2,Stable,True
+TA-1260,Terrace Africa,Village Walk Borrowdale,Line Shop 299,134,44.06709092522678,18,1,Stable,False
+TA-9236,Terrace Africa,Village Walk Borrowdale,Line Shop 622,114,38.59365123225105,16,2,Declining,True
+TA-1271,Terrace Africa,Village Walk Borrowdale,Line Shop 343,129,39.366265147579156,28,1,Stable,False
+TA-6344,Terrace Africa,Village Walk Borrowdale,Line Shop 680,127,39.19082279664931,28,0,Stable,False
+TA-8245,Terrace Africa,Village Walk Borrowdale,Line Shop 549,81,44.58633298187515,8,1,Stable,False
+TA-3526,Terrace Africa,Village Walk Borrowdale,Line Shop 299,105,42.29687759311309,16,0,Stable,False
+TA-2996,Terrace Africa,Village Walk Borrowdale,Line Shop 750,67,34.72618238255143,34,0,Stable,False
+TA-8690,Terrace Africa,Village Walk Borrowdale,Line Shop 566,88,42.50390752054556,12,0,Declining,True
+TA-2625,Terrace Africa,Village Walk Borrowdale,Line Shop 298,146,45.47032098510444,18,1,Stable,False
+TA-2765,Terrace Africa,Village Walk Borrowdale,Line Shop 817,129,49.825025572483625,14,0,Declining,True
+TA-8058,Terrace Africa,Village Walk Borrowdale,Line Shop 127,130,35.742723676355745,7,1,Stable,False
+TA-2859,Terrace Africa,Village Walk Borrowdale,Line Shop 927,110,31.990321997023315,22,0,Declining,True
+TA-1541,Terrace Africa,Greenfields Retail Centre,Spar (Anchor),2500,21.28582792512699,53,0,Stable,False
+TA-6640,Terrace Africa,Greenfields Retail Centre,The Smokehouse,109,43.289547512195405,49,1,Stable,False
+TA-3618,Terrace Africa,Greenfields Retail Centre,KFC Drive-Thru,159,39.153306006856596,52,0,Stable,False
+TA-6961,Terrace Africa,Greenfields Retail Centre,Café Nush,113,34.30856397281677,57,3,Stable,True
+TA-4820,Terrace Africa,Greenfields Retail Centre,Rollers,147,37.175658150131525,45,0,Stable,False
+TA-1811,Terrace Africa,Greenfields Retail Centre,Pharmachoice,275,30.136524600328908,22,0,Stable,False
+TA-2842,Terrace Africa,Greenfields Retail Centre,Line Shop 596,128,49.08386460193017,11,0,Declining,True
+TA-7511,Terrace Africa,Greenfields Retail Centre,Line Shop 753,99,40.54758255904464,7,2,Declining,True
+TA-5093,Terrace Africa,Greenfields Retail Centre,Line Shop 309,132,49.84764065933248,34,1,Stable,False
+TA-3795,Terrace Africa,Greenfields Retail Centre,Line Shop 866,92,44.91983865649118,7,0,Stable,False
+TA-5890,Terrace Africa,Greenfields Retail Centre,Line Shop 496,67,39.861963256326106,13,1,Declining,True
+TA-2859,Terrace Africa,Greenfields Retail Centre,Line Shop 776,97,33.842430084452666,15,0,Stable,False
+TA-8706,Terrace Africa,Greenfields Retail Centre,Line Shop 768,138,30.49741452690601,28,0,Stable,False
+TA-4754,Terrace Africa,Greenfields Retail Centre,Line Shop 747,60,42.83588641180185,7,0,Stable,False
+TA-9732,Terrace Africa,Greenfields Retail Centre,Line Shop 415,133,49.00582232776934,28,1,Stable,False
+TA-1010,Terrace Africa,Greenfields Retail Centre,Line Shop 985,78,38.198176588376825,6,1,Stable,False
+TA-7719,Terrace Africa,Greenfields Retail Centre,Line Shop 264,133,43.529652126020615,29,0,Stable,False
+TA-3046,Terrace Africa,Greenfields Retail Centre,Line Shop 384,88,31.942320450211213,23,4,Declining,True
+TA-6131,Terrace Africa,Greenfields Retail Centre,Line Shop 593,137,34.52066675739308,21,1,Stable,False
+TA-1996,Terrace Africa,Greenfields Retail Centre,Line Shop 381,80,46.15071450300795,27,0,Declining,True
+TA-4901,Terrace Africa,Greenfields Retail Centre,Line Shop 139,53,40.905383754397974,18,2,Stable,True
+TA-4237,Terrace Africa,Greenfields Retail Centre,Line Shop 884,79,43.41848619677981,34,0,Stable,False
+TA-7195,Terrace Africa,Greenfields Retail Centre,Line Shop 261,114,31.847377497967916,31,0,Stable,False
+TA-7526,Terrace Africa,Greenfields Retail Centre,Line Shop 643,147,31.442692321658466,7,1,Declining,True
+TA-5658,Terrace Africa,Greenfields Retail Centre,Line Shop 119,97,49.81864095290737,34,0,Stable,False
+TA-8612,Terrace Africa,Greenfields Retail Centre,Line Shop 451,106,32.24607347877158,28,2,Stable,True
+TA-5353,Terrace Africa,Greenfields Retail Centre,Line Shop 208,124,30.773073293485606,15,2,Stable,True
+TA-3195,Terrace Africa,Greenfields Retail Centre,Line Shop 885,86,49.45383222916247,27,0,Stable,False
+TA-1795,Terrace Africa,Greenfields Retail Centre,Line Shop 926,50,35.49771564360336,20,0,Stable,False
+TA-4800,Terrace Africa,Greenfields Retail Centre,Line Shop 186,131,48.66836023781297,32,0,Stable,False
+TA-1687,Terrace Africa,Greenfields Retail Centre,Line Shop 128,118,47.48634462302924,29,0,Declining,True
+TA-9497,Terrace Africa,Greenfields Retail Centre,Line Shop 801,63,33.969483389761045,23,0,Stable,False
+TA-4564,Terrace Africa,Greenfields Retail Centre,Line Shop 953,88,32.081472168613764,23,1,Stable,False
+TA-5985,Terrace Africa,Greenfields Retail Centre,Line Shop 941,96,39.39481589099496,24,0,Stable,False
+TA-5043,Terrace Africa,Greenfields Retail Centre,Line Shop 201,144,31.76440694482501,28,1,Stable,False
+TA-8184,Terrace Africa,Greenfields Retail Centre,Line Shop 428,121,34.22770786955939,14,0,Stable,False
+TA-5032,Terrace Africa,Greenfields Retail Centre,Line Shop 564,71,40.08868457439968,8,0,Declining,True
+TA-8542,Terrace Africa,Greenfields Retail Centre,Line Shop 234,118,44.572332541611885,13,0,Stable,False
+TA-9340,Terrace Africa,Greenfields Retail Centre,Line Shop 174,134,40.431208777768,7,0,Declining,True
+TA-6828,Terrace Africa,Greenfields Retail Centre,Line Shop 281,60,31.387346867084297,30,0,Declining,True
+TA-6860,Terrace Africa,Greenfields Retail Centre,Line Shop 674,130,38.71471184661434,10,0,Declining,True
+TA-1653,Terrace Africa,Greenfields Retail Centre,Line Shop 379,87,34.627172667214026,17,2,Stable,True
+TA-7586,Terrace Africa,Greenfields Retail Centre,Line Shop 960,118,43.51679936603979,35,1,Declining,True
+TA-7398,Terrace Africa,Greenfields Retail Centre,Line Shop 100,103,40.611401241052064,9,0,Stable,False
+TA-4952,Terrace Africa,Greenfields Retail Centre,Line Shop 168,134,39.110894169963835,23,0,Stable,False
+TA-8035,Terrace Africa,Greenfields Retail Centre,Line Shop 100,69,37.875561038244626,21,0,Stable,False
+TA-7786,Terrace Africa,Greenfields Retail Centre,Line Shop 368,138,30.481988764935057,30,1,Stable,False
+TA-4146,Terrace Africa,Greenfields Retail Centre,Line Shop 168,70,42.510810947436816,12,0,Declining,True
+TA-8958,Terrace Africa,Greenfields Retail Centre,Line Shop 896,77,31.22341444565572,22,0,Stable,False
+TA-3203,Terrace Africa,Greenfields Retail Centre,Line Shop 223,128,32.843089151840616,33,0,Stable,False
+TA-3712,Terrace Africa,Greenfields Retail Centre,Line Shop 229,129,44.513125216844415,15,1,Stable,False
+TA-4939,Terrace Africa,Greenfields Retail Centre,Line Shop 951,84,35.023353217377306,10,0,Stable,False
+TA-3579,Terrace Africa,Greenfields Retail Centre,Line Shop 776,140,40.48117723900765,17,3,Stable,True
+TA-3649,Terrace Africa,Greenfields Retail Centre,Line Shop 496,54,46.70526399093383,18,1,Stable,False
+TA-5637,Terrace Africa,Greenfields Retail Centre,Line Shop 102,107,33.402603462856696,21,0,Declining,True
+TA-9678,Terrace Africa,Greenfields Retail Centre,Line Shop 607,65,39.576288505436565,24,1,Stable,False
+TA-2083,Terrace Africa,Greenfields Retail Centre,Line Shop 365,99,42.161421718445645,22,0,Stable,False
+TA-7014,Terrace Africa,Greenfields Retail Centre,Line Shop 239,84,32.49660078592741,14,1,Stable,False
+TA-7089,Terrace Africa,Greenfields Retail Centre,Line Shop 889,77,33.36632412641925,21,0,Declining,True
+TA-5107,Terrace Africa,Greenfields Retail Centre,Line Shop 112,107,33.397144592821256,9,1,Declining,True
+TA-4230,Terrace Africa,Greenfields Retail Centre,Line Shop 982,102,48.92247291415653,20,0,Declining,True
+TA-2271,Terrace Africa,Greenfields Retail Centre,Line Shop 673,95,41.95269006907304,27,0,Stable,False
+TA-9924,Terrace Africa,Greenfields Retail Centre,Line Shop 287,92,49.14532325953232,18,0,Stable,False
+TA-8847,Terrace Africa,Greenfields Retail Centre,Line Shop 709,88,39.771242634971934,34,0,Declining,True
+TA-2050,Terrace Africa,Greenfields Retail Centre,Line Shop 245,78,33.51054565459426,19,1,Declining,True
+TA-5737,Terrace Africa,Greenfields Retail Centre,Line Shop 572,137,43.374057117385924,28,1,Stable,False
+TA-7184,Terrace Africa,Highland Park Ph1,Pick n Pay (Anchor),2500,20.48707572055258,44,0,Stable,False
+TA-3124,Terrace Africa,Highland Park Ph1,Puma Energy,800,25.239494884696878,37,0,Stable,False
+TA-3810,Terrace Africa,Highland Park Ph1,Chicken Inn,246,43.61475522751735,43,0,Stable,False
+TA-5134,Terrace Africa,Highland Park Ph1,Pizza Inn,208,36.54746602373196,26,0,Stable,False
+TA-3268,Terrace Africa,Highland Park Ph1,Creamy Inn,153,38.67445034141875,34,0,Stable,False
+TA-9575,Terrace Africa,Highland Park Ph1,Design Quarter,103,33.806918092395236,59,0,Declining,True
+TA-1857,Terrace Africa,Highland Park Ph1,Line Shop 565,53,36.43220246001051,22,1,Stable,False
+TA-7968,Terrace Africa,Highland Park Ph1,Line Shop 926,59,43.33778334411391,14,1,Stable,False
+TA-6223,Terrace Africa,Highland Park Ph1,Line Shop 526,125,40.05995336073077,19,0,Declining,True
+TA-7091,Terrace Africa,Highland Park Ph1,Line Shop 515,102,31.818624370602762,22,0,Stable,False
+TA-9601,Terrace Africa,Highland Park Ph1,Line Shop 842,137,39.30298219763904,32,0,Stable,False
+TA-3280,Terrace Africa,Highland Park Ph1,Line Shop 331,60,36.86058485157181,15,1,Stable,False
+TA-8207,Terrace Africa,Highland Park Ph1,Line Shop 441,82,46.59017598971374,16,1,Declining,True
+TA-3336,Terrace Africa,Highland Park Ph1,Line Shop 316,90,31.153449255751944,27,0,Declining,True
+TA-4359,Terrace Africa,Highland Park Ph1,Line Shop 383,56,44.370392504490155,26,0,Stable,False
+TA-1339,Terrace Africa,Highland Park Ph1,Line Shop 802,119,30.31882539641882,25,0,Declining,True
+TA-9499,Terrace Africa,Highland Park Ph1,Line Shop 392,132,36.419919022517135,35,0,Stable,False
+TA-8823,Terrace Africa,Highland Park Ph1,Line Shop 874,122,46.4893624879702,30,0,Stable,False
+TA-8343,Terrace Africa,Highland Park Ph1,Line Shop 717,95,46.62989690436706,35,0,Stable,False
+TA-7700,Terrace Africa,Highland Park Ph1,Line Shop 228,145,39.531656877343,25,1,Declining,True
+TA-9507,Terrace Africa,Highland Park Ph1,Line Shop 109,123,34.73381840452178,8,1,Stable,False
+TA-6832,Terrace Africa,Highland Park Ph1,Line Shop 771,105,42.14667631401292,31,1,Stable,False
+TA-7349,Terrace Africa,Highland Park Ph1,Line Shop 451,87,39.151477138003024,32,0,Stable,False
+TA-1708,Terrace Africa,Highland Park Ph1,Line Shop 911,70,43.26936720946128,34,0,Declining,True
+TA-3464,Terrace Africa,Highland Park Ph1,Line Shop 167,136,41.64869653607057,34,0,Declining,True
+TA-5727,Terrace Africa,Highland Park Ph1,Line Shop 418,78,46.31257489113065,24,1,Declining,True
+TA-8264,Terrace Africa,Highland Park Ph1,Line Shop 890,86,33.637969434786015,28,1,Stable,False
+TA-4973,Terrace Africa,Highland Park Ph1,Line Shop 309,137,43.74413191029169,30,2,Stable,True
+TA-2740,Terrace Africa,Highland Park Ph2,Booties Pharmacy (Anchor),600,42.748364684566766,54,0,Declining,True
+TA-8224,Terrace Africa,Highland Park Ph2,RocoMamas,350,25.706198912959255,45,0,Stable,False
+TA-4421,Terrace Africa,Highland Park Ph2,Spur,350,37.28176895279503,41,0,Declining,True
+TA-8596,Terrace Africa,Highland Park Ph2,Ocean Basket,350,39.08656736019886,36,0,Stable,False
+TA-4596,Terrace Africa,Highland Park Ph2,First Capital Bank,250,33.05881812250503,49,0,Stable,False
+TA-8279,Terrace Africa,Highland Park Ph2,Liquor Supplies,207,31.788970774824527,42,0,Stable,False
+TA-1179,Terrace Africa,Highland Park Ph2,Safari Trading Co.,213,42.80656157607985,39,1,Stable,False
+TA-5962,Terrace Africa,Highland Park Ph2,Line Shop 503,104,36.01504219407067,30,1,Stable,False
+TA-2192,Terrace Africa,Highland Park Ph2,Line Shop 697,82,44.20095677944701,27,1,Declining,True
+TA-6432,Terrace Africa,Highland Park Ph2,Line Shop 591,66,45.365665872016876,10,0,Stable,False
+TA-8101,Terrace Africa,Highland Park Ph2,Line Shop 214,83,32.62576903385103,9,0,Stable,False
+TA-8218,Terrace Africa,Highland Park Ph2,Line Shop 988,62,45.553387509565,26,0,Stable,False
+TA-9062,Terrace Africa,Highland Park Ph2,Line Shop 920,98,38.501370845768555,6,0,Stable,False
+TA-1519,Terrace Africa,Highland Park Ph2,Line Shop 428,93,36.34089968726049,6,0,Declining,True
+TA-1809,Terrace Africa,Chinamano Corner,Puma Energy (Anchor),800,27.843749142999286,19,0,Stable,False
+TA-3457,Terrace Africa,Chinamano Corner,Simbisa Drive-Thru,186,42.99472245756579,24,0,Stable,False
+TA-4046,Terrace Africa,Chinamano Corner,Pharmacy,108,43.78491081261179,43,0,Stable,False
+TA-6881,Terrace Africa,Chinamano Corner,Convenience Store,230,44.738847679493794,13,0,Stable,False
+TA-6649,Terrace Africa,Chinamano Corner,Line Shop 400,135,49.65189148881903,15,0,Declining,True
+TA-9935,Terrace Africa,Chinamano Corner,Line Shop 481,74,31.79934170338975,16,0,Stable,False
+TA-9165,Terrace Africa,Chinamano Corner,Line Shop 593,131,45.53079640694953,8,0,Stable,False
+TA-1653,Terrace Africa,Chinamano Corner,Line Shop 631,148,44.00377933299238,17,2,Declining,True
+TA-9120,Terrace Africa,Chinamano Corner,Line Shop 229,104,39.20193606633778,28,0,Declining,True
